@@ -1,0 +1,34 @@
+[2024-06-19T09:50:01.355+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-19T09:50:01.371+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Backup_Database.parse_task scheduled__2024-06-19T04:10:00+00:00 [queued]>
+[2024-06-19T09:50:01.376+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Backup_Database.parse_task scheduled__2024-06-19T04:10:00+00:00 [queued]>
+[2024-06-19T09:50:01.377+0530] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-19T09:50:01.392+0530] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): parse_task> on 2024-06-19 04:10:00+00:00
+[2024-06-19T09:50:01.394+0530] {standard_task_runner.py:63} INFO - Started process 2598 to run task
+[2024-06-19T09:50:01.397+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Backup_Database', 'parse_task', 'scheduled__2024-06-19T04:10:00+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/basic.py', '--cfg-path', '/tmp/tmpwcu4gq2x']
+[2024-06-19T09:50:01.399+0530] {standard_task_runner.py:91} INFO - Job 89: Subtask parse_task
+[2024-06-19T09:50:01.444+0530] {task_command.py:426} INFO - Running <TaskInstance: Backup_Database.parse_task scheduled__2024-06-19T04:10:00+00:00 [running]> on host FN-21052948.
+[2024-06-19T09:50:01.512+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='sarika' AIRFLOW_CTX_DAG_ID='Backup_Database' AIRFLOW_CTX_TASK_ID='parse_task' AIRFLOW_CTX_EXECUTION_DATE='2024-06-19T04:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-19T04:10:00+00:00'
+[2024-06-19T09:50:01.513+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-19T09:50:01.543+0530] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-19T09:50:01.544+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-19T09:50:01.550+0530] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Backup_Database, task_id=parse_task, run_id=scheduled__2024-06-19T04:10:00+00:00, execution_date=20240619T041000, start_date=20240619T042001, end_date=20240619T042001
+[2024-06-19T09:50:01.570+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-19T09:50:01.584+0530] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-19T09:50:01.592+0530] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-06-19T09:53:06.935+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-19T09:53:06.959+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Backup_Database.parse_task scheduled__2024-06-19T04:10:00+00:00 [queued]>
+[2024-06-19T09:53:06.968+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Backup_Database.parse_task scheduled__2024-06-19T04:10:00+00:00 [queued]>
+[2024-06-19T09:53:06.968+0530] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-19T09:53:06.992+0530] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): parse_task> on 2024-06-19 04:10:00+00:00
+[2024-06-19T09:53:06.995+0530] {standard_task_runner.py:63} INFO - Started process 2702 to run task
+[2024-06-19T09:53:06.998+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Backup_Database', 'parse_task', 'scheduled__2024-06-19T04:10:00+00:00', '--job-id', '93', '--raw', '--subdir', 'DAGS_FOLDER/basic.py', '--cfg-path', '/tmp/tmppmv8ysfx']
+[2024-06-19T09:53:06.999+0530] {standard_task_runner.py:91} INFO - Job 93: Subtask parse_task
+[2024-06-19T09:53:07.049+0530] {task_command.py:426} INFO - Running <TaskInstance: Backup_Database.parse_task scheduled__2024-06-19T04:10:00+00:00 [running]> on host FN-21052948.
+[2024-06-19T09:53:07.126+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='sarika' AIRFLOW_CTX_DAG_ID='Backup_Database' AIRFLOW_CTX_TASK_ID='parse_task' AIRFLOW_CTX_EXECUTION_DATE='2024-06-19T04:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-19T04:10:00+00:00'
+[2024-06-19T09:53:07.127+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-19T09:53:07.161+0530] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-19T09:53:07.161+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-19T09:53:07.168+0530] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Backup_Database, task_id=parse_task, run_id=scheduled__2024-06-19T04:10:00+00:00, execution_date=20240619T041000, start_date=20240619T042306, end_date=20240619T042307
+[2024-06-19T09:53:07.211+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-19T09:53:07.229+0530] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-19T09:53:07.236+0530] {local_task_job_runner.py:222} INFO - ::endgroup::

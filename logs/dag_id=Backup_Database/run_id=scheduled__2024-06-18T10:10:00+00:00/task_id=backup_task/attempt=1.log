@@ -1,0 +1,68 @@
+[2024-06-18T15:50:55.488+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-18T15:50:55.503+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Backup_Database.backup_task scheduled__2024-06-18T10:10:00+00:00 [queued]>
+[2024-06-18T15:50:55.509+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Backup_Database.backup_task scheduled__2024-06-18T10:10:00+00:00 [queued]>
+[2024-06-18T15:50:55.509+0530] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-18T15:50:55.525+0530] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): backup_task> on 2024-06-18 10:10:00+00:00
+[2024-06-18T15:50:55.527+0530] {standard_task_runner.py:63} INFO - Started process 36329 to run task
+[2024-06-18T15:50:55.529+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Backup_Database', 'backup_task', 'scheduled__2024-06-18T10:10:00+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/basic.py', '--cfg-path', '/tmp/tmp__rx9jsy']
+[2024-06-18T15:50:55.531+0530] {standard_task_runner.py:91} INFO - Job 27: Subtask backup_task
+[2024-06-18T15:50:55.577+0530] {task_command.py:426} INFO - Running <TaskInstance: Backup_Database.backup_task scheduled__2024-06-18T10:10:00+00:00 [running]> on host FN-21052948.
+[2024-06-18T15:50:55.647+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='sarika' AIRFLOW_CTX_DAG_ID='Backup_Database' AIRFLOW_CTX_TASK_ID='backup_task' AIRFLOW_CTX_EXECUTION_DATE='2024-06-18T10:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-18T10:10:00+00:00'
+[2024-06-18T15:50:55.648+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-18T15:50:55.659+0530] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-06-18T15:50:55.660+0530] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '/home/kiit/airflow/bashScripts/backup.sh ']
+[2024-06-18T15:50:55.665+0530] {subprocess.py:86} INFO - Output:
+[2024-06-18T15:50:55.669+0530] {subprocess.py:93} INFO - mysqldump: [Warning] Using a password on the command line interface can be insecure.
+[2024-06-18T15:50:55.670+0530] {subprocess.py:93} INFO - mysqldump: Got error: 2002: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (13) when trying to connect
+[2024-06-18T15:50:55.670+0530] {subprocess.py:97} INFO - Command exited with return code 2
+[2024-06-18T15:50:55.671+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-18T15:50:55.679+0530] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/kiit/airflow-env/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/kiit/airflow-env/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/kiit/airflow-env/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/kiit/airflow-env/lib/python3.8/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2024-06-18T15:50:55.681+0530] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=Backup_Database, task_id=backup_task, run_id=scheduled__2024-06-18T10:10:00+00:00, execution_date=20240618T101000, start_date=20240618T102055, end_date=20240618T102055
+[2024-06-18T15:50:55.697+0530] {standard_task_runner.py:110} ERROR - Failed to execute job 27 for task backup_task (Bash command failed. The command returned a non-zero exit code 2.; 36329)
+[2024-06-18T15:50:55.702+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-18T15:50:55.718+0530] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-18T15:50:55.719+0530] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-06-18T15:51:31.832+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-18T15:51:31.846+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Backup_Database.backup_task scheduled__2024-06-18T10:10:00+00:00 [queued]>
+[2024-06-18T15:51:31.852+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Backup_Database.backup_task scheduled__2024-06-18T10:10:00+00:00 [queued]>
+[2024-06-18T15:51:31.852+0530] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-18T15:51:31.865+0530] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): backup_task> on 2024-06-18 10:10:00+00:00
+[2024-06-18T15:51:31.867+0530] {standard_task_runner.py:63} INFO - Started process 36352 to run task
+[2024-06-18T15:51:31.870+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Backup_Database', 'backup_task', 'scheduled__2024-06-18T10:10:00+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/basic.py', '--cfg-path', '/tmp/tmp476697pf']
+[2024-06-18T15:51:31.871+0530] {standard_task_runner.py:91} INFO - Job 28: Subtask backup_task
+[2024-06-18T15:51:31.909+0530] {task_command.py:426} INFO - Running <TaskInstance: Backup_Database.backup_task scheduled__2024-06-18T10:10:00+00:00 [running]> on host FN-21052948.
+[2024-06-18T15:51:31.973+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='sarika' AIRFLOW_CTX_DAG_ID='Backup_Database' AIRFLOW_CTX_TASK_ID='backup_task' AIRFLOW_CTX_EXECUTION_DATE='2024-06-18T10:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-18T10:10:00+00:00'
+[2024-06-18T15:51:31.973+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-18T15:51:31.980+0530] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-06-18T15:51:31.980+0530] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '/home/kiit/airflow/bashScripts/backup.sh ']
+[2024-06-18T15:51:31.985+0530] {subprocess.py:86} INFO - Output:
+[2024-06-18T15:51:31.989+0530] {subprocess.py:93} INFO - mysqldump: [Warning] Using a password on the command line interface can be insecure.
+[2024-06-18T15:51:31.990+0530] {subprocess.py:93} INFO - mysqldump: Got error: 2002: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (13) when trying to connect
+[2024-06-18T15:51:31.990+0530] {subprocess.py:97} INFO - Command exited with return code 2
+[2024-06-18T15:51:31.991+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-18T15:51:31.997+0530] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/kiit/airflow-env/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/kiit/airflow-env/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/kiit/airflow-env/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/kiit/airflow-env/lib/python3.8/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2024-06-18T15:51:32.000+0530] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=Backup_Database, task_id=backup_task, run_id=scheduled__2024-06-18T10:10:00+00:00, execution_date=20240618T101000, start_date=20240618T102131, end_date=20240618T102131
+[2024-06-18T15:51:32.015+0530] {standard_task_runner.py:110} ERROR - Failed to execute job 28 for task backup_task (Bash command failed. The command returned a non-zero exit code 2.; 36352)
+[2024-06-18T15:51:32.042+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-18T15:51:32.059+0530] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-18T15:51:32.060+0530] {local_task_job_runner.py:222} INFO - ::endgroup::
